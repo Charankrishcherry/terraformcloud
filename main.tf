@@ -1,3 +1,7 @@
+resource "random_id" "suffix" {
+  byte_length = 4
+}
+
 module "storage" {
   source                     = "./modules/azure-storage-account"
   storage_account_name       = "storageacct${random_id.suffix.hex}"
