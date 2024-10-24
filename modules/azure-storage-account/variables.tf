@@ -1,38 +1,39 @@
 variable "storage_account_name" {
-  type = string
-  description = "The name of the storage account."
+  type        = string
+  description = "Unique storage account name."
 }
 
 variable "resource_group_name" {
-  type = string
-  description = "The name of the resource group."
+  type        = string
+  description = "Resource group name."
 }
 
 variable "location" {
-  type = string
-  description = "The Azure region to deploy the storage account."
+  type        = string
+  description = "Azure region."
 }
 
 variable "account_tier" {
-  type = string
-  default = "Standard"
-  description = "The tier of the storage account (Standard or Premium)."
+  type        = string
+  description = "Storage account tier."
+  default     = "Standard"
 }
 
 variable "account_replication_type" {
-  type = string
-  default = "LRS"
-  description = "The replication type for the storage account."
+  type        = string
+  description = "Replication type."
+  default     = "LRS"
 }
 
 variable "min_tls_version" {
   type = string
-  default = "TLS1_2" # Maintain this for security
-  description = "Minimum TLS version supported.  Recommended: TLS1_2 or higher."
+  description = "Minimum TLS version. Recommended: TLS1_2 for security."
+  default = "TLS1_2"
 }
 
+
 variable "tags" {
-  type = map(string)
-  default = {}
-  description = "Tags to apply to the storage account."
+  type        = map(string)
+  description = "Tags for the storage account."
+  default     = {}
 }
