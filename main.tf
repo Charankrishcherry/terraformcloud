@@ -1,7 +1,3 @@
-provider "azurerm" { # Add the provider block
-  features {}  # This empty block is now explicitly included
-}
-
 module "storage" {
   source                     = "./modules/azure-storage-account"
   storage_account_name       = "Simplename"
