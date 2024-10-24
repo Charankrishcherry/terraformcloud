@@ -1,5 +1,15 @@
-resource "random_id" "suffix" {
-  byte_length = 4
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0" # Or your desired version
+    }
+  }
+}
+
+
+provider "azurerm" { # Add the provider block
+  features {}  # This empty block is now explicitly included
 }
 
 module "storage" {
