@@ -4,7 +4,7 @@ provider "azurerm" { # Add the provider block
 
 module "storage" {
   source                     = "./modules/azure-storage-account"
-  storage_account_name       = "storageacct${random_id.suffix.hex}"
+  storage_account_name       = "Simplename"
   resource_group_name         = var.resource_group_name
   location                   = var.location
   account_tier                = var.storage_account_tier
