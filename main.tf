@@ -1,5 +1,5 @@
 module "storage" {
-  source               = "./modules/storage"
+  source               = "./modules/azure-storage-account"
   resource_group_name  = var.resource_group_name
   location             = var.location
   storage_account_name = var.storage_account_name
